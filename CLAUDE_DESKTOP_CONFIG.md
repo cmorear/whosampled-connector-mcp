@@ -35,12 +35,13 @@ Add this to your `claude_desktop_config.json`:
 {
   "mcpServers": {
     "whosampled-mcp": {
-      "command": "uvx",
+      "command": "python",
       "args": [
-        "--from",
-        "git+https://github.com/dj-oyu/whosampled-connector-mcp",
-        "whosampled-connector"
-      ]
+        "-m",
+        "whosampled_connector"
+      ],
+      // CRITICAL: Set this path to your exact directory!
+      "cwd": "C:\\Users\\Moorman\\Desktop\\whosampled-connector-mcp" 
     }
   }
 }
